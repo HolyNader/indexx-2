@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="landing" id="landing">
+    <div class="d-flex container flex-column flex-shrink-0 p-3" id="sideBar" style="height: 100vh; width: 280px">
+
+      <span class="fs-4 ">Sidebar</span>
+      <div class="setting position-fixed">
+        <i class="fa fa-gear" onclick="openSide()"></i>
+      </div>
+      <hr />
+      <div class="sidebarCont ">
+        <div class="p-1 text-center">Change Color</div>
+        <div class="colorMaster">
+          <span class="active" data-color="#ffbb00cd"></span>
+          <span class="" data-color="#e92063"></span>
+          <span class="" data-color="#009688"></span>
+          <span class="" data-color="#03a9f4"></span>
+          <span class="" data-color="#7b7575"></span>
+        </div>
+        <div class="p-1 text-center">Random Background</div>
+        <div class="d-flex justify-content-evenly buttons">
+          <button type="button" id="yes" class="active" onclick="onRandomBG()">
+            Yes
+          </button>
+          <button type="button" id="no" onclick="offRandomBG()">No</button>
+        </div>
+        <div class="p-1 text-center">Bullets Show</div>
+        <div class="d-flex justify-content-evenly buttons2">
+          <button type="button" id="yes" class="yes active" onclick="bulletOn()">
+            Yes
+          </button>
+          <button type="button" id="no" class="no" onclick="bulletOff()">No</button>
+        </div>
+        <button class="reset-option" onclick="resetOptions()">Reset Options</button>
+      </div>
+    </div>
+    <div class="container">
+      <header class="d-flex justify-content-between py-3">
+        <h5 style="color: #fff">Speacial Design</h5>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a data-scope=".about" class="nav-link " aria-current="page">About</a>
+          </li>
+          <li class="nav-item"><a data-scope=".skills" class="nav-link ">Skills</a></li>
+          <li class="nav-item"><a data-scope=".our-gallery" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a data-scope=".features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a data-scope=".tests" class="nav-link">Testimonials</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="container">
+      <div class="caption">
+        <h1>We Are <span>Creative</span> Agency</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Blanditiis, nisi! Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Obcaecati, voluptate!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="about pt-5 pb-5" id="active">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="img/20.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+            loading="lazy" />
+        </div>
+        <div class="col-lg-6 info-box">
+          <h1 class="display-5 fw-bold mb-3">About Us</h1>
+          <p class="lead">
+            Quickly design and customize responsive mobile-first sites with
+            Bootstrap, the world’s most popular front-end open source toolkit,
+            featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skills pt-5 pb-5">
+    <div class="container">
+      <h2>Our Skills</h2>
+      <div class="box">
+        <div class="progress-name">
+          <h5>HTML</h5>
+        </div>
+        <div class="progress-cont">
+          <span data-progress="70%"></span>
+        </div>
+      </div>
+      <div class="box">
+        <div class="progress-name">
+          <h5>CSS</h5>
+        </div>
+        <div class="progress-cont">
+          <span data-progress="60%"></span>
+        </div>
+      </div>
+      <div class="box">
+        <div class="progress-name">
+          <h5>Java</h5>
+        </div>
+        <div class="progress-cont">
+          <span data-progress="40%"></span>
+        </div>
+      </div>
+      <div class="box">
+        <div class="progress-name">
+          <h5>Python</h5>
+        </div>
+        <div class="progress-cont">
+          <span data-progress="30%"></span>
+        </div>
+      </div>
+      <div class="box">
+        <div class="progress-name">
+          <h5>PHP</h5>
+        </div>
+        <div class="progress-cont">
+          <span data-progress="90%"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="our-gallery pt-5 pb-5">
+    <div class="container">
+      <h2>Our Gallery</h2>
+      <div class="images-box d-flex flex-wrap justify-content-center">
+        <img src="img/01.jpg" alt="Image One" />
+        <img src="img/02.jpg" alt="Image Two" />
+        <img src="img/03.jpg" alt="Image There" />
+        <img src="img/04.jpg" alt="Image Four" />
+        <img src="img/05.jpg" alt="Image Five" />
+        <img src="img/06.jpg" alt="" />
+        <img src="img/07.jpg" alt="" />
+        <img src="img/08.jpg" alt="" />
+        <img src="img/09.jpg" alt="" />
+        <img src="img/10.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="container">
+      <div class="timeline-content position-relative overflow-hidden">
+        <div class="year">2018</div>
+        <div class="left position-relative">
+          <div class="test-heading">
+            <h5>Testing Heading</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam deleniti praesentium, debitis ipsa itaque autem id quo,
+              aspernatur facilis beatae dicta ut numquam doloribus magni
+              ducimus quam, ea veniam inventore?
+            </p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="right position-relative">
+          <div class="test-heading">
+            <h5>Testing Heading</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam deleniti praesentium, debitis ipsa itaque autem id quo,
+              aspernatur facilis beatae dicta ut numquam doloribus magni
+              ducimus quam, ea veniam inventore?
+            </p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="year">2016</div>
+
+        <div class="left">
+          <div class="test-heading">
+            <h5>Testing Heading</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam deleniti praesentium, debitis ipsa itaque autem id quo,
+              aspernatur facilis beatae dicta ut numquam doloribus magni
+              ducimus quam, ea veniam inventore?
+            </p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="right">
+          <div class="test-heading">
+            <h5>Testing Heading</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam deleniti praesentium, debitis ipsa itaque autem id quo,
+              aspernatur facilis beatae dicta ut numquam doloribus magni
+              ducimus quam, ea veniam inventore?
+            </p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="left">
+          <div class="test-heading">
+            <h5>Testing Heading</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam deleniti praesentium, debitis ipsa itaque autem id quo,
+              aspernatur facilis beatae dicta ut numquam doloribus magni
+              ducimus quam, ea veniam inventore?
+            </p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="year">2013</div>
+
+        <div class="left">
+          <div class="test-heading">
+            <h5>Testing Heading</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam deleniti praesentium, debitis ipsa itaque autem id quo,
+              aspernatur facilis beatae dicta ut numquam doloribus magni
+              ducimus quam, ea veniam inventore?
+            </p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="left">
+          <div class="test-heading">
+            <h5>Testing Heading</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam deleniti praesentium, debitis ipsa itaque autem id quo,
+              aspernatur facilis beatae dicta ut numquam doloribus magni
+              ducimus quam, ea veniam inventore?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="features">
+    <h2 id="head-1">Our Features</h2>
+    <div class="container marketing">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="image"><img src="img/11.jpg"></div>
+          <h4>Heading</h2>
+            <p>Some representative placeholder content for the three columns of text below the carousel. This is the
+              first column.</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="image"><img src="img/12.png"></div>
+          <h4>Heading</h4>
+          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="image"><img src="img/13.png"></div>
+          <h4>Heading</h4>
+          <p>And lastly this, the third column of representative placeholder content.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="image"><img src="img/14.png"></div>
+          <h4>Heading</h4>
+          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first
+            column.</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="image"><img src="img/15.png"></div>
+          <h4>Heading</h4>
+          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="image"><img src="img/16.jpg"></div>
+          <h4>Heading</h4>
+          <p>And lastly this, the third column of representative placeholder content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tests mt-5 pt-5 pb-5">
+    <div class="container pt-5 pb-5">
+      <h3 id="head-2"> Testimonials</h3>
+      <div class="card-group">
+        <div class="card ">
+          <div class="card-body ">
+            <div class="d-flex">
+              <img src="img/17.jpg" alt="">
+              <div class="d-grid">
+                <h5 class="card-title">Ahmed Essam</h5>
+                <p class="card-text"><small class="text-body-secondary">CEO At Company</small></p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <p class="card-text review">You should always include testimonials in your copy. The reader finds it easier
+              to believe the endorsement of a fellow consumer than the puffery of an anonymous copywriter.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body ">
+            <div class="d-flex">
+              <img src="img/18.jpg" alt="">
+              <div class="d-grid">
+                <h5 class="card-title">Adel Shokry</h5>
+                <p class="card-text"><small class="text-body-secondary">CEO At Company</small></p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 45 mins ago</small></p>
+              </div>
+            </div>
+            <p class="card-text review">You should always include testimonials in your copy. The reader finds it easier
+              to believe the endorsement of a fellow consumer than the puffery of an anonymous copywriter.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body ">
+            <div class="d-flex">
+              <img src="img/19.png" alt="">
+              <div class="d-grid">
+                <h5 class="card-title">Sayed Ahmed</h5>
+                <p class="card-text"><small class="text-body-secondary">CEO At Company</small></p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 2 hours ago</small></p>
+              </div>
+            </div>
+            <p class="card-text review">You should always include testimonials in your copy. The reader finds it easier
+              to believe the endorsement of a fellow consumer than the puffery of an anonymous copywriter.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bullet">
+    <div class="bullet">
+      <div class="tooltipe" data-scope=".about">About Us</div>
+    </div>
+    <div class="bullet">
+      <div class="tooltipe" data-scope=".skills">Skills</div>
+    </div>
+    <div class="bullet">
+      <div class="tooltipe" data-scope=".our-gallery">Gallery</div>
+    </div>
+    <div class="bullet">
+      <div class="tooltipe" data-scope=".features">Features</div>
+    </div>
+    <div class="bullet">
+      <div class="tooltipe" data-scope=".tests">Testimonials</div>
+    </div>
+  </div>
+  <h2 class="heading2">Contact Us</h2>
+  <div class="contact ">
+
+    <div class="over-lay"></div>
+    <div class="container">
+
+      <div class="row ">
+        <div class="col d-grid left ">
+          <input type="text" placeholder="Your Name" id="">
+          <input type="number" placeholder="Your Phone" id="">
+          <input type="text" placeholder="Your Email" id="">
+          <input type="text" placeholder="Subject" id="">
+        </div>
+        <div class="col right">
+          <textarea placeholder="Write your message..." id="" cols="30" rows="10"></textarea>
+          <input type="button" class="submit " value="submit">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="py-3 my-4">
+  <div class="contanier">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+  </div></footer>
+  <script src="js/j-query.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="p5.js"></script>
+</body>
+
+</html>
